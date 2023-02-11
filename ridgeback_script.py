@@ -38,7 +38,7 @@ def move_ridgeback():
         twist.angular.y = 0.5
         twist.angular.z = 0.5
 
-        print("\nStarting move_forward...")
+        print("\nStarting movement...")
 
         # Print on screen and write to rosout
         rospy.loginfo(twist)
