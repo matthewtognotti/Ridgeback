@@ -4,19 +4,21 @@
 # Date: 9 Feburary 2023
 # File: ridgeback_script.py
 
-# Move_forward is a publisher node that publishes to the /ridgeback_velocity_controller/cmd_vel topic
+# Move_ridgeback  is a  node that publishes to the /cmd_vel topic
 # of type geometry_msgs/Twist
+
+# This code serves as an example of a publisher and is not necessarily useful on its own 
 
 import rospy
 from geometry_msgs.msg import Twist
-
+# Twist expresses velocity broken into its linear and angular parts
 
 def move_ridgeback():
 
-    # Name of node is move_forward, anonmyous = True ensures the name is unique by adding extra numberrs
-    rospy.init_node('move_forward', anonymous="True")
+    # Name of node is move_ridgeback, anonmyous = True ensures the name is unique by adding extra numberrs
+    rospy.init_node('move_ridgeback', anonymous="True")
 
-    # Create publisher to the  cmd_vel topic with type geometry_msgs/Twist
+    # Create publisher to the cmd_vel topic with type geometry_msgs/Twist
     pub = rospy.Publisher('cmd_vel', Twist, queue_size=10)
 
     # Note: when publishing to a topic once, sometimes the message is not receieved by the subscriber if
