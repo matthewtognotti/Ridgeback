@@ -7,7 +7,7 @@
 # Move_ridgeback  is a  node that publishes to the /cmd_vel topic
 # of type geometry_msgs/Twist
 
-# This code serves as an example of a publisher and is not necessarily useful on its own 
+# This code serves as an example of a publisher
 
 import rospy
 from geometry_msgs.msg import Twist
